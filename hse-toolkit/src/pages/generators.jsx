@@ -1,6 +1,6 @@
 import React from 'react';
-import jsaeditor from '../components/generators/jsaeditor';
-import hiragenerator from '../components/generators/hiragenerator';
+import jsaeditor from '../components/generators/jsaeditor.jsx';
+import hiragenerator from '../components/generators/hiragenerator.jsx';
 
 const Generators = () => {
   return (
