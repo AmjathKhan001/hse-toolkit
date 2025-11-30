@@ -1,4 +1,5 @@
 import React from 'react';
+// The BrowserRouter component is correctly aliased as Router
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/header.jsx';
 import Footer from './components/layout/footer.jsx';
@@ -12,15 +13,17 @@ import './styles/globals.css';
 function App() {
   return (
     <ToolProvider>
-      <Router>
+      {/* 🛠️ FIX 1: Added basename="/" for correct deployment routing on Netlify */}
+      <Router basename="/"> 
         <div className="min-h-screen bg-gray-50 flex flex-col">
           <Header />
           <main className="flex-grow container mx-auto p-4 sm:p-6 lg:p-8">
             <Routes>
-              <Route path="/" element={<home />} />
-              <Route path="/calculators" element={<calculators />} />
-              <Route path="/generators" element={<generators />} />
-              <Route path="/checklists" element={<checklists />} />
+              {/* 🛠️ FIX 2: Corrected component casing from <home /> to <Home />, etc. */}
+              <Route path="/" element={<Home />} />
+              <Route path="/calculators" element={<Calculators />} />
+              <Route path="/generators" element={<Generators />} />
+              <Route path="/checklists" element={<Checklists />} />
             </Routes>
           </main>
           <Footer />
