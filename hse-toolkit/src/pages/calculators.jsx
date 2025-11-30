@@ -1,7 +1,7 @@
 import React from 'react';
-import safemanhourscalculator from '../components/calculators/safemanhourscalculator';
-import trircalculator from '../components/calculators/triecalculator';
-import mandayscalculator from '../components/calculators/mandayscalculator';
+import safemanhourscalculator from '../components/calculators/safemanhourscalculator.jsx';
+import trircalculator from '../components/calculators/triecalculator.jsx';
+import mandayscalculator from '../components/calculators/mandayscalculator.jsx';
 
 const calculators = () => {
   return (
