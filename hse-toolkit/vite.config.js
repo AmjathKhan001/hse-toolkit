@@ -1,16 +1,15 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path' // 1. Import 'path'
+import path from 'path' 
 
 export default defineConfig({
+  // 🎯 CRITICAL FIX: Add this line to set the base URL for asset loading
+  base: '/',
   plugins: [react()],
-  // 2. Explicitly set the root to the current directory ('.')
-  root: path.resolve(__dirname, './'), 
+  root: path.resolve(__dirname, './'),
   build: {
-    // 3. Explicitly set the entry file
     rollupOptions: {
-        input: 'index.html', 
+      input: 'index.html',
     },
     outDir: 'dist'
   }
