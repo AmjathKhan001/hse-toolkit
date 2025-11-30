@@ -1,5 +1,5 @@
 import React from 'react';
-import constructionchecklist from '../components/checklists/constructionchecklist';
+import constructionchecklist from '../components/checklists/constructionchecklist.jsx';
 
 const Checklists = () => {
   return (
