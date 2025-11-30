@@ -1,6 +1,6 @@
 import React from 'react';
-import JSAEditor from '../components/generators/JSAEditor';
-import HIRAGenerator from '../components/generators/HIRAGenerator';
+import jsaeditor from '../components/generators/jsaeditor';
+import hiragenerator from '../components/generators/hiragenerator';
 
 const Generators = () => {
   return (
@@ -14,8 +14,8 @@ const Generators = () => {
         </p>
         
         <div className="space-y-8">
-          <JSAEditor />
-          <HIRAGenerator />
+          <jsaeditor />
+          <hiragenerator />
         </div>
       </div>
     </div>
