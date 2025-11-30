@@ -1,9 +1,9 @@
 import React from 'react';
-import SafeManHoursCalculator from '../components/calculators/SafeManHoursCalculator';
-import TRIRCalculator from '../components/calculators/TRIRCalculator';
-import ManDaysCalculator from '../components/calculators/ManDaysCalculator';
+import safemanhourscalculator from '../components/calculators/safemanhourscalculator';
+import trircalculator from '../components/calculators/triecalculator';
+import mandayscalculator from '../components/calculators/mandayscalculator';
 
-const Calculators = () => {
+const calculators = () => {
   return (
     <div>
       <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-100 mb-6">
@@ -15,9 +15,9 @@ const Calculators = () => {
         </p>
         
         <div className="space-y-8">
-          <SafeManHoursCalculator />
-          <TRIRCalculator />
-          <ManDaysCalculator />
+          <safemanhourscalculator />
+          <trircalculator />
+          <mandayscalculator />
         </div>
       </div>
     </div>
