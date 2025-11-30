@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import Home from './pages/Home';
-import Calculators from './pages/Calculators';
-import Generators from './pages/Generators';
-import Checklists from './pages/Checklists';
-import { ToolProvider } from './context/ToolContext';
+import Header from './components/layout/header.jsx';
+import Footer from './components/layout/footer.jsx';
+import Home from './pages/home.jsx';
+import Calculators from './pages/calculators.jsx';
+import Generators from './pages/generators.jsx';
+import Checklists from './pages/checklists.jsx';
+import { ToolProvider } from './context/toolcontext.jsx';
 import './styles/globals.css';
 
 function App() {
@@ -17,10 +17,10 @@ function App() {
           <Header />
           <main className="flex-grow container mx-auto p-4 sm:p-6 lg:p-8">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/calculators" element={<Calculators />} />
-              <Route path="/generators" element={<Generators />} />
-              <Route path="/checklists" element={<Checklists />} />
+              <Route path="/" element={<home />} />
+              <Route path="/calculators" element={<calculators />} />
+              <Route path="/generators" element={<generators />} />
+              <Route path="/checklists" element={<checklists />} />
             </Routes>
           </main>
           <Footer />
