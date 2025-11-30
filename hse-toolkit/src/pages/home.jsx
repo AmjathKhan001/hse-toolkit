@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, FileText, Checklist, Download, Shield, TrendingUp } from 'lucide-react';
+// The import statement is correct: ListChecks
+import { Calculator, FileText, ListChecks, Download, Shield, TrendingUp } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -68,7 +69,8 @@ const Home = () => {
 
         <Link to="/checklists" className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-amazon-orange hover:shadow-xl transition-shadow">
           <div className="flex items-center mb-3">
-            <Checklist className="w-8 h-8 text-amazon-orange mr-3" />
+            {/* THIS IS THE FIX: Changed 'Checklist' to 'ListChecks' */}
+            <ListChecks className="w-8 h-8 text-amazon-orange mr-3" />
             <h3 className="text-xl font-bold text-dark-gray">Checklists</h3>
           </div>
           <p className="text-gray-600">Conduct safety inspections with comprehensive checklists for various work environments.</p>
