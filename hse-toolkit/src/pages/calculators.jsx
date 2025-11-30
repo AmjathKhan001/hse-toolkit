@@ -1,6 +1,6 @@
 import React from 'react';
 import safemanhourscalculator from '../components/calculators/safemanhourscalculator.jsx';
-import trircalculator from '../components/calculators/triecalculator.jsx';
+import TRIRCalculator from '../components/calculators/TRIRCalculator.jsx';
 import mandayscalculator from '../components/calculators/mandayscalculator.jsx';
 
 const calculators = () => {
