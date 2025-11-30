@@ -1,45 +1,46 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Calculator, FileText, Checklist } from 'lucide-react';
+// CHANGED: 'Checklist' is not exported. Replaced with 'ListChecks'.
+import { Home, Calculator, FileText, ListChecks } from 'lucide-react';
 
 const Header = () => {
-  const location = useLocation();
-  
-  const isActive = (path) => location.pathname === path;
+    const location = useLocation();
 
-  const navItems = [
-    { path: '/', label: 'Home', icon: Home },
-    { path: '/calculators', label: 'KPIs & Rates', icon: Calculator },
-    { path: '/generators', label: 'Documentation', icon: FileText },
-    { path: '/checklists', label: 'Checklists', icon: Checklist }
-  ];
+    // Helper function to determine active link
+    const isActive = (path) => location.pathname === path ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-700 hover:text-blue-500';
 
-  return (
-    <header className="bg-dark-gray text-white p-4 rounded-lg shadow-lg mb-6 text-center no-print">
-      <h1 className="text-3xl font-extrabold mb-1">HSE Toolkit</h1>
-      <p className="text-lg font-light">Practical, audit-ready tools</p>
-      <p className="text-sm text-gray-300 mt-1">No sign-up required — your data stays in your browser</p>
-      
-      <nav className="mt-4">
-        <div className="flex flex-wrap justify-center gap-2">
-          {navItems.map(({ path, label, icon: Icon }) => (
-            <Link
-              key={path}
-              to={path}
-              className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive(path)
-                  ? 'bg-hse-blue text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
-            >
-              <Icon className="w-4 h-4 mr-2" />
-              {label}
-            </Link>
-          ))}
-        </div>
-      </nav>
-    </header>
-  );
+    return (
+        <header className="bg-white shadow-md sticky top-0 z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-16">
+                    <div className="flex-shrink-0">
+                        <Link to="/" className="text-xl font-bold text-gray-800">
+                            HSE Toolkit
+                        </Link>
+                    </div>
+                    <nav className="hidden md:flex space-x-8">
+                        <Link to="/" className={`flex items-center space-x-1 p-2 ${isActive('/')}`}>
+                            <Home className="w-5 h-5" />
+                            <span>Home</span>
+                        </Link>
+                        <Link to="/calculators" className={`flex items-center space-x-1 p-2 ${isActive('/calculators')}`}>
+                            <Calculator className="w-5 h-5" />
+                            <span>Calculators</span>
+                        </Link>
+                        <Link to="/generators" className={`flex items-center space-x-1 p-2 ${isActive('/generators')}`}>
+                            <FileText className="w-5 h-5" />
+                            <span>Generators</span>
+                        </Link>
+                        <Link to="/checklists" className={`flex items-center space-x-1 p-2 ${isActive('/checklists')}`}>
+                            {/* CHANGED: Used the corrected component name */}
+                            <ListChecks className="w-5 h-5" />
+                            <span>Checklists</span>
+                        </Link>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    );
 };
 
 export default Header;
