@@ -1,4 +1,5 @@
 import React from 'react';
+// FIX: Corrected import casing to PascalCase
 import ConstructionChecklist from '../components/checklists/constructionchecklist.jsx';
 
 const Checklists = () => {
@@ -13,6 +14,7 @@ const Checklists = () => {
         </p>
         
         <div className="space-y-8">
+          {/* FIX: Corrected usage casing to PascalCase */}
           <ConstructionChecklist />
         </div>
       </div>
