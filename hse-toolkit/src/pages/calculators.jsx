@@ -1,9 +1,11 @@
 import React from 'react';
-import safemanhourscalculator from '../components/calculators/safemanhourscalculator.jsx';
+// FIX: Corrected import casing to PascalCase
+import SafeManHoursCalculator from '../components/calculators/safemanhourscalculator.jsx';
 import TRIRCalculator from '../components/calculators/TRIRCalculator.jsx';
-import mandayscalculator from '../components/calculators/mandayscalculator.jsx';
+import ManDaysCalculator from '../components/calculators/mandayscalculator.jsx';
 
-const calculators = () => {
+// FIX: Renamed component to follow React convention (optional but recommended)
+const Calculators = () => {
   return (
     <div>
       <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-100 mb-6">
@@ -15,9 +17,10 @@ const calculators = () => {
         </p>
         
         <div className="space-y-8">
-          <safemanhourscalculator />
-          <trircalculator />
-          <mandayscalculator />
+          {/* FIX: Corrected usage casing */}
+          <SafeManHoursCalculator />
+          <TRIRCalculator />
+          <ManDaysCalculator />
         </div>
       </div>
     </div>
