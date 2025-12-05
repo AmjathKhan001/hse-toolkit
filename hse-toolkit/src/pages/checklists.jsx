@@ -1,5 +1,5 @@
 import React from 'react';
-import constructionchecklist from '../components/checklists/constructionchecklist.jsx';
+import ConstructionChecklist from '../components/checklists/constructionchecklist.jsx';
 
 const Checklists = () => {
   return (
@@ -13,7 +13,7 @@ const Checklists = () => {
         </p>
         
         <div className="space-y-8">
-          <constructionchecklist />
+          <ConstructionChecklist />
         </div>
       </div>
     </div>
