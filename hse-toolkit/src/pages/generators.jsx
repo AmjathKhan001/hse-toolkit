@@ -1,5 +1,5 @@
 import React from 'react';
-// FIX: Corrected import casing to PascalCase
+// FIX: Corrected import casing to PascalCase for all components
 import JsaEditor from '../components/generators/jsaeditor.jsx';
 import HiraGenerator from '../components/generators/hiragenerator.jsx';
 
@@ -15,7 +15,7 @@ const Generators = () => {
         </p>
         
         <div className="space-y-8">
-          {/* FIX: Corrected usage casing */}
+          {/* FIX: Corrected usage casing to PascalCase */}
           <JsaEditor />
           <HiraGenerator />
         </div>
